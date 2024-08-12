@@ -9,6 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class SwiggyAppApplication {
 
 	public static void main(String[] args) {
+		System.out.println("Swiggy Application");
 		SpringApplication.run(SwiggyAppApplication.class, args);
 	}
 
