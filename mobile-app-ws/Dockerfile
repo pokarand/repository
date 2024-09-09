@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
 # Copy the jar file to the container
-COPY target/mobile-app-ws-0.0.1-SNAPSHOT.jar app.jar
+COPY target/mobile-app-ws-0.0.1-SNAPSHOT.jar /app/mobile-app-ws.jar
 
 # Expose the port your app runs on
-EXPOSE 3000
+EXPOSE 8200
 
 # Run the jar file
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/mobile-app-ws.jar"]
